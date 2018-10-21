@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import 'whatwg-fetch';
@@ -15,17 +15,23 @@ class App extends Component {
     bar = () => {
         const that = this;
         fetch('/api/foo')
-            .then(function (response) {
+            .then(function(response) {
                 return response.json();
             })
-            .then(function (json) {
+            .then(function(json) {
                 console.log('parsed json', json);
                 that.setState(foo => (json));
             })
-            .catch(function (ex) {
+            .catch(function(ex) {
                 console.log('parsing failed, URL bad, network down, or similar', ex);
             });
     };
+
+    getFile = () => {
+        console.log('getFile called.');
+        this.setState({file: 'api.js'});
+    };
+
 
     render() {
         return (
@@ -36,12 +42,12 @@ class App extends Component {
                 </div>
 
                 <p className="App-intro">
-            state: {this.state.status}
-                </p>
+                    state: {this.state.status}
+                    </p>
                 <p className="App-intro">
-            file: {this.state.file}
+                    file: {this.state.file}
                 </p>
-                <button onClick={this.bar}>Bar</button>
+                <button id='getFile' onClick={this.getFile}>Bar</button>
             </div>
         );
     }
