@@ -21,7 +21,7 @@ describe('rest basic tests', function() {
 
     it('renders state of File paragraph after button click', () => {
         const wrapper = shallow(<App/>);
-        const nineSign = <p className="App-intro">file: api.js</p>;
+        const nineSign = <p className="App-intro">file: apitest.js</p>;
         wrapper.find('#getFile').simulate('click');
         expect(wrapper.contains(nineSign)).toBe(true);
     });

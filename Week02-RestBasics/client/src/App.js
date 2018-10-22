@@ -29,7 +29,7 @@ class App extends Component {
 
     getFile = () => {
         console.log('getFile called.');
-        this.setState({file: 'api.js'});
+        this.setState({file: 'apitest.js'});
     };
 
 
@@ -47,7 +47,8 @@ class App extends Component {
                 <p className="App-intro">
                     file: {this.state.file}
                 </p>
-                <button id='getFile' onClick={this.getFile}>Bar</button>
+                <button id='getFile' onClick={this.getFile}>test button</button>
+                <button onClick={this.bar}>server button</button>
             </div>
         );
     }
