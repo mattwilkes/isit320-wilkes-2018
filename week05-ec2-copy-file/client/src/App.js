@@ -23,7 +23,9 @@ class App extends Component {
                 <header>
                     <h1>Copy File</h1>
                 </header>
+                <main>
                     <button onClick={this.copyScript}>Copy Script</button>
+                </main>
             </div>
         );
     }

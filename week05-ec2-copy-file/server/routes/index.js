@@ -5,5 +5,4 @@ router.get('/copy-script', function(request, response) { 'use strict';
     response.send({ result: 'success' });
 });
 
-
 module.exports = router;
