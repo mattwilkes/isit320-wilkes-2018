@@ -39,7 +39,7 @@ echo $TAG_STRING
 function push_tag() {
   git add . 
   git status
-  git commit -m "${TAG_STRING} $NOw"
+  git commit -m "${TAG_STRING} $NOW"
   git push --set-upstream origin ${BRANCH}
 
   git tag -a "${TAG_VERSION}" -m "${TAG_STRING}"
