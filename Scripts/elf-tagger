@@ -30,10 +30,10 @@ function git_branch {
     echo "$commit"
   fi
 }
-OLD_TAG_VERSION=`git tag --sort=taggerdate | tail -1 |  sed -En "s/v(.*)/\1/p"`
+OLD_TAG_VERSION=`git tag | tail -1 |  sed -En "s/v(.*)/\1/p"`
 TAG_VERSION=v`semver-inc -p $OLD_TAG_VERSION`
 BRANCH='git_branch'
-TAG_STRING="$1 for $2 on branch `BRANCH` with tag ${TAG_VERSION}."
+TAG_STRING="$1 for $2 on branch `git_branch` with tag ${TAG_VERSION}."
 echo $TAG_STRING
 
 function push_tag() {
