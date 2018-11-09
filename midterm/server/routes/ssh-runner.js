@@ -1,3 +1,4 @@
+const Client = require('ssh2').Client;
 var express = require('express');
 var router = express.Router();
 
@@ -15,9 +16,9 @@ const runCpuInfo = (hostAddress, response) => {
                 .on('close', function(code, signal) {
                     console.log(
                         'Stream :: close :: code: ' +
-                        code +
-                        ', signal: ' +
-                        signal
+                            code +
+                            ', signal: ' +
+                            signal
                     );
                     conn.end();
                     response.send({ result: 'success', allData: allData });
@@ -27,9 +28,9 @@ const runCpuInfo = (hostAddress, response) => {
                     allData += data;
                 })
                 .stderr.on('data', function(data) {
-                console.log('STDERR: ' + data);
-                allData += data;
-            });
+                    console.log('STDERR: ' + data);
+                    allData += data;
+                });
         });
     }).connect({
         host: hostAddress,
@@ -45,7 +46,7 @@ router.get('/call-cpu-info', (request, response) => {
     response.send({ result: 'success' });
     runCpuInfo(hostAddress, response);
 });
-/* GET home page. */
+
 router.get('/', function(req, res, next) {
     'use strict';
     res.render('index', { title: 'server' });
