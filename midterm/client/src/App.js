@@ -70,15 +70,16 @@ class App extends Component {
     };
     callCpuInfo = () => {
         fetch('/call-cpu-info')
-            .then(function (response) {
+            .then(function(response) {
                 return response.json();
             })
-            .then(function (json) {
+            .then(function(json) {
                 console.log('JSON from server:', json);
-
             })
-            .catch(function (ex) {
-                console.log('parsing failed, error on server, URL bad, network down, or similar');
+            .catch(function(ex) {
+                console.log(
+                    'parsing failed, error on server, URL bad, network down, or similar'
+                );
                 console.log(JSON.stringify(ex, null, 4));
             });
     };
@@ -138,7 +139,6 @@ class App extends Component {
                                 value="Uptime"
                                 id="elf-radio-cpu"
                                 onChange={this.handleChange}
-
                             />
                             <label htmlFor="elf-radio-cpu">Uptime</label>
                         </div>
