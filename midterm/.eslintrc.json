@@ -9,6 +9,7 @@
         "linebreak-style": ["error", "unix"],
         "quotes": ["warn", "single"],
         "semi": ["error", "always"],
+        "no-control-regex": "off",
 
         // override default options for rules from base configurations
         "comma-dangle": ["off", "always"],
