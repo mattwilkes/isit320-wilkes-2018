@@ -10,5 +10,5 @@ module.exports = () => {
     ec2.associateAddress(elasticIpParams, (err, data) => {
         if (err) console.log(err, err.stack); // an error occurred
         else console.log(data);           // successful response
-    });
-};
+    })
+}

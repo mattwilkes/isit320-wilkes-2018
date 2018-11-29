@@ -1,5 +1,4 @@
-import React, {Component} from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 import 'whatwg-fetch';
 
@@ -20,27 +19,27 @@ class App extends Component {
             })
             .then(function(json) {
                 console.log('parsed json', json);
-                that.setState(foo => (json));
+                that.setState(foo => json);
             })
             .catch(function(ex) {
-                console.log('parsing failed, URL bad, network down, or similar', ex);
+                console.log(
+                    'parsing failed, URL bad, network down, or similar',
+                    ex
+                );
             });
     };
 
     render() {
         return (
             <div className="App">
-            <div className="App-header">
-            <img src={logo} className="App-logo" alt="logo"/>
-            <h2>Welcome to React</h2>
-        </div>
+                <div />
 
-        <p className="App-intro">
-            state: {this.state.status} file: {this.state.file}
-    </p>
-        <button onClick={this.queryServer}>Bar</button>
-        </div>
-    );
+                <p className="App-intro">
+                    state: {this.state.status} file: {this.state.file}
+                </p>
+                <button onClick={this.queryServer}>Bar</button>
+            </div>
+        );
     }
 }
 
