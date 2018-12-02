@@ -1,0 +1,10 @@
+internal/modules/cjs/loader.js:583
+    throw err;
+    ^
+
+Error: Cannot find module '/home/bcuser/Git/isit320-wilkes-2018/week05-ec2-copy-file/bin/www'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:581:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:507:25)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)
+    at startup (internal/bootstrap/node.js:279:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:696:3)
