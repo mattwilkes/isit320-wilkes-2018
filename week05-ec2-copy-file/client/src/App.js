@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
-
     copyScript = () => {
         fetch('/script-pusher/copy-script')
             .then(function(response) {
@@ -12,10 +11,12 @@ class App extends Component {
                 console.log('parsed json', json);
             })
             .catch(function(ex) {
-                console.log('parsing failed, URL bad, network down, or similar', ex);
+                console.log(
+                    'parsing failed, URL bad, network down, or similar',
+                    ex
+                );
             });
     };
-
 
     render() {
         return (

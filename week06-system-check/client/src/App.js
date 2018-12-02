@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -12,13 +11,16 @@ class App extends Component {
                 console.log('parsed json', json);
             })
             .catch(function(ex) {
-                console.log('parsing failed, URL bad, network down, or similar', ex);
+                console.log(
+                    'parsing failed, URL bad, network down, or similar',
+                    ex
+                );
             });
     };
     render() {
         return (
             <div className="App">
-                    <button onClick={this.copyScript}>Copy Script</button>
+                <button onClick={this.copyScript}>Copy Script</button>
             </div>
         );
     }
