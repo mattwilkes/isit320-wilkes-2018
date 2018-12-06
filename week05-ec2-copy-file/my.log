@@ -1,0 +1,23 @@
+nohup: ignoring input
+npm WARN ajv-keywords@3.2.0 requires a peer of ajv@^6.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.4 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.4: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+audited 31757 packages in 8.13s
+found 8 low severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+audited 255 packages in 0.864s
+found 0 vulnerabilities
+
+npm WARN saveError ENOENT: no such file or directory, open '/home/bcuser/Git/isit320-wilkes-2018/week05-ec2-copy-file/package.json'
+npm WARN enoent ENOENT: no such file or directory, open '/home/bcuser/Git/isit320-wilkes-2018/week05-ec2-copy-file/package.json'
+npm WARN week05-ec2-copy-file No description
+npm WARN week05-ec2-copy-file No repository field.
+npm WARN week05-ec2-copy-file No README data
+npm WARN week05-ec2-copy-file No license field.
+
+up to date in 0.3s
+found 0 vulnerabilities
+
+Port 30026 is already in use
+Something is already running on port 30025.

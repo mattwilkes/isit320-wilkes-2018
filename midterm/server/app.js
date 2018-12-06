@@ -12,7 +12,7 @@ var app = express();
 const scriptRunner = require('./routes/ssh-runner');
 app.use('/ssh-runner', scriptRunner);
 
-const scriptPusher = require('./routes/script-pusher');
+const scriptPusher = require('../../aws-provision/server/routes/script-pusher');
 app.use('/script-pusher', scriptPusher);
 
 // view engine setup

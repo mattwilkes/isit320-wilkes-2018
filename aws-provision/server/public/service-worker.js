@@ -11,11 +11,11 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts(
-    'https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js'
-);
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
-importScripts('/precache-manifest.369c1145f036bd838d4a69e79ebcd241.js');
+importScripts(
+  "/precache-manifest.2d8fdde7eee0ed2acff44eb447fdef25.js"
+);
 
 workbox.clientsClaim();
 
@@ -28,6 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute('/index.html', {
-    blacklist: [/^\/_/, /\/[^\/]+\.[^\/]+$/]
+workbox.routing.registerNavigationRoute("/index.html", {
+  
+  blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
